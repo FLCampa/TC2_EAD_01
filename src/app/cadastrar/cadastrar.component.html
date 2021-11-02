@@ -1,0 +1,19 @@
+<div>
+  <h2>Cadastrar</h2>
+  <label
+    >Título
+    <input [(ngModel)]="produto.title" placeholder="Título" />
+  </label>
+  <label
+    >Preço
+    <input [(ngModel)]="produto.price" placeholder="Preço" />
+  </label>
+  <label
+    >Descrição
+    <textarea
+      [(ngModel)]="produto.description"
+      placeholder="Descrição"
+    ></textarea>
+  </label>
+  <button (click)="cadastrar()">Cadastrar produto</button>
+</div>

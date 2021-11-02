@@ -1,0 +1,33 @@
+<div>
+  <table>
+    <thead>
+      <tr>
+        <td>Preço</td>
+        <td>Descrição</td>
+        <td>Título</td>
+        <td colspan="2">Ações</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of listaProdutos">
+        <td>{{ p.price }}</td>
+        <td>{{ p.description }}</td>
+        <td>{{ p.title }}</td>
+        <td><button (click)="atualizarProduto(p)">Atualizar</button></td>
+        <td><button (click)="deletarProduto(p)">Deletar</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-container *ngIf="produtoSelecionadoParaAtualizar">
+  <app-atualizar
+    [produtoParaAtualizar]="produtoSelecionadoParaAtualizar"
+  ></app-atualizar>
+</ng-container>
+
+<ng-container *ngIf="produtoSelecionadoParaDeletar">
+  <app-deletar
+    [produtoParaDeletar]="produtoSelecionadoParaDeletar"
+  ></app-deletar>
+</ng-container>

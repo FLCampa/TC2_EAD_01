@@ -1,0 +1,21 @@
+div {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 2rem;
+}
+
+table {
+  margin-top: 2rem;
+  text-align: center;
+  border: 1px solid;
+}
+
+td {
+  border: 1px solid;
+  min-width: 100px;
+}
+
+button {
+  width: 100%;
+  cursor: pointer;
+}
